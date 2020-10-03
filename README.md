@@ -7,11 +7,11 @@ You need to have Python version >=3.0 and the following modules installed:
 <br/>Bio
 
 ## Usage instructions
-Run the provided 'accessory_tool_for_DNA_sequences.py' script with Python3 on a fasta file (or on multiple fasta files using a wildcard) that contain either nucleotide or amino-acid sequences in standard fasta format.<br/> 
+Run the provided `accessory_tool_for_DNA_sequences.py` script with Python3 on a fasta file (or on multiple fasta files using a wildcard) that contain either nucleotide or amino-acid sequences in standard fasta format.<br/> 
 With this script you can make summary bio-statistics (number of sequences, total sequences length, GC content and N50 value). You can retrieve or delete specific sequences based on sequence ID (headers) list. You can filter the fasta file to delete sequences shorter than a defined threshold (X bp). Finally, you can trim specific sequences based genomic coordinates (start position, end position).
 
 ## Full command-line options (--help)
-`usage: accessory_tool_for_DNA_sequences.py [-h] [-i <IDs list>] [-r] [-d] [-l <genomic coordinates lists>] [-t] [-m <length bp>] [-s] fasta [fasta ...]
+```usage: accessory_tool_for_DNA_sequences.py [-h] [-i <IDs list>] [-r] [-d] [-l <genomic coordinates lists>] [-t] [-m <length bp>] [-s] fasta [fasta ...]
 
 Accessory tool for DNA sequences filtering and basic statistics, version 0.3 By Vadim (Dani) Dubinsky (dani.dubinsky@gmail.com)
 
@@ -30,7 +30,7 @@ optional arguments:
   -m <length (bp)>, --min-length <length (bp)>
                         delete sequences shorter than --min-length
   -s, --basic-stats     print basic sequence statistics (total sequences length, number of sequences, GC content, assembly N50)
-`
+```
 
 
 
