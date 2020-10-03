@@ -34,11 +34,13 @@ optional arguments:
 ```
 
 ## Examples
-1. To delete sequence shorter than 1000bp from a fasta file:<br/>
+* To delete sequence shorter than 1000bp from a fasta file:<br/>
+* To delete sequence shorter than 1000bp from a fasta file:<br/>
+* To delete sequence shorter than 1000bp from a fasta file:<br/>
 `Python3 accessory_tool_for_DNA_sequences.py your_file.fasta -m 1000`<br/>
 Output file <your_file.fasta_min_length.fasta> was created
 <br/>
-2. To retrieve 3 specific sequences from your fasta file, provide a text file with these 3 seqeuence headers:
+* To retrieve 3 specific sequences from your fasta file, provide a text file with these 3 seqeuence headers:
 ```
 cat header_ids.txt
 NODE_1_length_34583
@@ -50,7 +52,7 @@ Output file <your_file.fasta_retrieved.fasta> was created
 ```
 
 <br/>
-3. To trim 4 specific sequences according to genomic coordinates (remove nucelotides at specific positions in each sequence, start pos. -> end pos.). Provide a tab-delimeted file with 3 columns: sequence ID, start position, end position:
+* To trim 4 specific sequences according to genomic coordinates (remove nucelotides at specific positions in each sequence, start pos. -> end pos.). Provide a tab-delimeted file with 3 columns: sequence ID, start position, end position:
 
 ```
 cat sequence_id_coords.txt
