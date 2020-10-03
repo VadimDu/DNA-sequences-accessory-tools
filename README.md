@@ -8,7 +8,7 @@ You need to have Python version >=3.0 and the following modules installed:
 
 ## Usage instructions
 Run the provided `accessory_tool_for_DNA_sequences.py` script with Python3 on a fasta file (or on multiple fasta files using a wildcard) that contain either nucleotide or amino-acid sequences in standard fasta format.<br/> 
-With this script you can make summary bio-statistics (number of sequences, total sequences length, GC content and N50 value). You can retrieve or delete specific sequences based on sequence ID (headers) list. You can filter the fasta file to delete sequences shorter than a defined threshold (X bp). Finally, you can trim specific sequences (remove nucleotides) based on genomic coordinates (start position, end position over each sequence).
+With this script you can make summary bio-statistics (number of sequences, total sequences length, GC content and N50 value). You can retrieve or delete specific sequences based on sequence ID (headers) list. You can filter the fasta file to delete sequences shorter than a defined threshold (X bp). Finally, you can trim specific sequences (remove nucleotides) based on genomic coordinates (start position, end position over each sequence).<br/>
 
 ## Full command-line options (--help)
 ```
@@ -32,6 +32,7 @@ optional arguments:
                         delete sequences shorter than --min-length
   -s, --basic-stats     output basic sequence statistics report (total sequences length, number of sequences, GC content, assembly N50)
 ```
+**Note:** the following options can work on multiple fasta files provided with a wildcard: --min-length and --basic-stats. The rest of the options work only on a single fasta file.<br/>
 
 ## Examples
 * To delete sequence shorter than 1000bp from a fasta file:<br/>
