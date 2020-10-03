@@ -11,7 +11,8 @@ Run the provided `accessory_tool_for_DNA_sequences.py` script with Python3 on a 
 With this script you can make summary bio-statistics (number of sequences, total sequences length, GC content and N50 value). You can retrieve or delete specific sequences based on sequence ID (headers) list. You can filter the fasta file to delete sequences shorter than a defined threshold (X bp). Finally, you can trim specific sequences based genomic coordinates (start position, end position).
 
 ## Full command-line options (--help)
-```usage: accessory_tool_for_DNA_sequences.py [-h] [-i <IDs list>] [-r] [-d] [-l <genomic coordinates lists>] [-t] [-m <length bp>] [-s] fasta [fasta ...]
+```
+usage: accessory_tool_for_DNA_sequences.py [-h] [-i <IDs list>] [-r] [-d] [-l <genomic coordinates lists>] [-t] [-m <length bp>] [-s] fasta [fasta ...]
 
 Accessory tool for DNA sequences filtering and basic statistics, version 0.3 By Vadim (Dani) Dubinsky (dani.dubinsky@gmail.com)
 
