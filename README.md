@@ -1,2 +1,2 @@
-# DNA_sequences_accessory_tool_
-An accessory for performing basic manipulations and obtaining statistical information on DNA sequences
+# DNA sequences accessory tool
+An accessory for performing basic manipulations and obtaining bio-statistical information on DNA sequences. Can work also on amino-acid sequences.
