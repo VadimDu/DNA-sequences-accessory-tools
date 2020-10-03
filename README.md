@@ -36,7 +36,8 @@ optional arguments:
 ## Examples
 To delete sequence shorter than 1000bp from a fasta file:<br/>
 `Python3 accessory_tool_for_DNA_sequences.py your_file.fasta -m 1000`
-
+Output file <ERS2664665_scaffolds_mod.fa_min_length.fasta> was created
+<br/>
 To retrieve 3 specific sequences from your fasta file, provide a text file with these 3 seqeuence headers:
 ```
 cat header_ids.txt
@@ -45,7 +46,6 @@ NODE_3_length_33269
 NODE_5_length_28153
 
 Python3 accessory_tool_for_DNA_sequences.py your_file.fasta --id-file header_ids.txt --retrieve
-<br/>
 Output file <your_file.fasta_retrieved.fasta> was created
 ```
 
