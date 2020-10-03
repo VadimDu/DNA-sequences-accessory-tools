@@ -47,7 +47,6 @@ NODE_5_length_28153
 Python3 accessory_tool_for_DNA_sequences.py your_file.fasta --id-file header_ids.txt --retrieve
 Output file <your_file.fasta_retrieved.fasta> was created
 ```
-<br/>
 * To trim 4 specific sequences according to genomic coordinates (remove nucelotides at specific positions in each sequence, start pos. -> end pos.). Provide a tab-delimeted file with 3 columns: sequence ID, start position, end position:<br/>
 
 ```
