@@ -17,7 +17,7 @@ usage: accessory_tool_for_DNA_sequences.py [-h] [-i <IDs list>] [-r] [-d] [-l <g
 Accessory tool for DNA sequences filtering and basic statistics, version 0.3 By Vadim (Dani) Dubinsky (dani.dubinsky@gmail.com)
 
 positional arguments:
-  fasta                 fasta file/s with genes or contigs (supports the usage of wildcard '*' to select several files)
+  fasta                 fasta file/s with genes or contigs (supports the usage of wildcard '*' to select multiple files)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -31,6 +31,21 @@ optional arguments:
   -m <length (bp)>, --min-length <length (bp)>
                         delete sequences shorter than --min-length
   -s, --basic-stats     print basic sequence statistics (total sequences length, number of sequences, GC content, assembly N50)
+```
+
+## Examples
+To delete sequence shorter than 1000bp from a fasta file:
+`Python3 accessory_tool_for_DNA_sequences.py your_file.fasta -m 1000
+
+To retrieve 3 specific sequences from your fasta file, provide a text file with these 3 seqeuence headers:
+```
+cat header_ids.txt
+NODE_1_length_34583
+NODE_3_length_33269
+NODE_5_length_28153
+
+Python3 accessory_tool_for_DNA_sequences.py your_file.fasta --id-file header_ids.txt --retrieve
+Output file <your_file.fasta_retrieved.fasta> was created
 ```
 
 
