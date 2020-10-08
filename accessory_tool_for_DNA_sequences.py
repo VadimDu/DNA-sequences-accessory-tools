@@ -34,7 +34,7 @@ def main():
 
     path_exists(args.fasta)
         
-    seq_odict, num_seq = load_fasta(args.fasta)
+    seq_odict, num_seq = load_fasta(args.fasta) #returns list of dict (sequences) - one for each fasta file in case wildcare * was used
     
     if args.id_file:
         path_exists(args.id_file)
@@ -102,6 +102,10 @@ def path_exists(file):
                 #raise argparse.ArgumentTypeError("{0} does not exist".format(file))
                 sys.exit("Error: " + f + " file does not exist!")
 
+def pos_args_len(file):
+        if (len(file) > 1):
+            sys.exit("Input error, only a single file can be used with this argument")
+
 def load_fasta(fasta):
     '''Load & copy the fasta file/s into an ordered dict/s
        Support several files in parallel'''
@@ -157,7 +161,7 @@ def output_fasta(retrieve, delete, min_length, seq, fasta):
 def retrieve_seq(seq_odict, list_ids, fasta):
     '''Search and match sequences from list_ids file (ID headers list). This method was changed in order to retrieve the sequences in the same order as in id_list file
        Works only on a single file'''
-    #found_seq = {}
+    pos_args_len(fasta)
     found_seq = collections.OrderedDict()
     for l in list_ids:
         for keys,vals in seq_odict[0].items(): #keys are IDs, vals are the sequence itself
@@ -174,6 +178,7 @@ def retrieve_seq(seq_odict, list_ids, fasta):
 def delete_seq(seq_odict, list_ids, num_seq, fasta):
     '''Keep only the non-matched sequences (exclude the sequences from ID header list)
        Works only on a single file'''
+    pos_args_len(fasta)
     for key in [key for key in seq_odict[0] if key in list_ids]: del seq_odict[0][key] #Using dictionary comprehension 
     print("Search has finished")
     if len(seq_odict[0]) == num_seq:
@@ -185,6 +190,7 @@ def delete_seq(seq_odict, list_ids, num_seq, fasta):
 def trim_contig(seq_odict, contigs_id, coord_l, coord_h, fasta):
     '''Trim specific contigs by nucleotide coordinates based on an input list with genomic coordinates (start->end)
        Works only on a single file'''
+    pos_args_len(fasta)
     seqs = []
     for keys,vals in seq_odict[0].items():
         if (keys not in contigs_id): #if this contig is not in the input list of contigs to trim, then copy it without changes
