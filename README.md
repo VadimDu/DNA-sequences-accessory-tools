@@ -1,5 +1,8 @@
-# DNA sequences accessory tool
-An accessory for performing basic manipulations and obtaining bio-statistical information on DNA sequences. Can work also on amino-acid sequences.
+# DNA sequences accessory tools
+Accessory tools for performing basic manipulations and obtaining bio-statistical information on DNA sequences. Can work also on amino-acid sequences.
+
+
+fragment_contigs_fasta.py - tool for fragmentation of fasta files (usefull in case of nucleotide contigs) into equal length fragments
 
 ## Python modules requirements
 You need to have Python version >=3.0 and the following modules installed:
