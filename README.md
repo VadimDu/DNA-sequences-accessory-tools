@@ -65,3 +65,20 @@ NODE_10_length_43224	1	50
 python3 accessory_tool_for_DNA_sequences.py your_file.fasta --loc-on-contig sequence_id_coords.txt --trim
 Output file <your_file.fasta_trimmed.fasta> was created
 ```
+
+## Fragment a fasta file (with nucleotide contigs) into equal length fragments
+```
+usage: fragment_contigs_fasta.py [-h] [-f <fragment length bp>] -o <path-to-output> fasta
+
+Tool for fragmentation of fasta files (nucleotide contigs in this case) into equal length pieces (By Vadim-Dani Dubinsky dani.dubinsky@gmail.com)
+
+positional arguments:
+  fasta                 fasta file with nucleotide contigs (also accepts amino-acid sequences)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f <fragment length (bp)>, --fragment_len <fragment length (bp)>
+                        the required fragment length to split the input fasta file to equally sized fragments (10kb by default)
+  -o <path-to-output>, --output <path-to-output>
+                        path to output file name for the fragmented contigs
+```
