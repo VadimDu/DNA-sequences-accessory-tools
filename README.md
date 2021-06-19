@@ -83,7 +83,7 @@ optional arguments:
                         path to output file name for the fragmented contigs
 ```
 
-## Random sampling (without replacment) of fasta files, required number of sequences by user input
+## Random sampling (without replacment) of fasta files, the required number of sequences is by user input
 ```
 usage: random_sampling_fasta.py [-h] -s <sequence number int> -o <path-to-output> fasta
 
@@ -119,7 +119,7 @@ optional arguments:
                         path to output file name for the fasta test set
 ```
 
-## Handling of none-ATGC nucleotides in a fasta file by replacing them with a random nucleotides
+## Handling of none-ATGC nucleotides in a fasta file by replacing them with random nucleotides
 ```
 usage: handle_none_ATGC.py [-h] -o <path-to-output> fasta
 
