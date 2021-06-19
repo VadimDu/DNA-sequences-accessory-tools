@@ -1,5 +1,5 @@
 
-# title: random_sampling_fasta.py
+# title: handle_none_ATGC_fasta.py
 # description: Tool for handling none-ATGC nucleotides in a fasta file of nucleotide sequences
 # author: Vadim (Dani) Dubinsky [dani.dubinsky@gmail.com]
 # date: 05/05/2021
