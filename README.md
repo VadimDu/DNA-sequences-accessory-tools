@@ -66,7 +66,7 @@ python3 accessory_tool_for_DNA_sequences.py your_file.fasta --loc-on-contig sequ
 Output file <your_file.fasta_trimmed.fasta> was created
 ```
 
-## Fragment a fasta file (with nucleotide contigs) into equal length fragments
+## Fragment a fasta file (with nucleotide contigs) into equal length fragments (user input)
 ```
 usage: fragment_contigs_fasta.py [-h] [-f <fragment length bp>] -o <path-to-output> fasta
 
@@ -81,4 +81,55 @@ optional arguments:
                         the required fragment length to split the input fasta file to equally sized fragments (10kb by default)
   -o <path-to-output>, --output <path-to-output>
                         path to output file name for the fragmented contigs
+```
+
+## Random sampling (without replacment) of fasta files, required number of sequences by user input
+```
+usage: random_sampling_fasta.py [-h] -s <sequence number int> -o <path-to-output> fasta
+
+Tool for random sampling (without replacment) of fasta files
+
+positional arguments:
+  fasta                 fasta file with nucleotide/aa sequences
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s <sequence number (int)>, --sequence_num <sequence number (int)>
+                        the required number of sequences to sample from the input fasta
+  -o <path-to-output>, --output <path-to-output>
+                        path to output file name for the sampled subset of the original fasta
+```
+
+## Split a fasta files into 2 separates files - train set & test set, based on a test size proportion (user input)
+```
+usage: split_train_test_fasta.py [-h] -s <test set size float> -otr <path-to-output> -ote <path-to-output> fasta
+
+Tool for splitting a fasta files into 2 separates files - train set & test set, based on a test size proportion
+
+positional arguments:
+  fasta                 fasta file with nucleotide/aa sequences
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s <test set size (float)>, --size_testset <test set size (float)>
+                        required size (proportion, e.g. 0.2) of the test set
+  -otr <path-to-output>, --output_train <path-to-output>
+                        path to output file name for the fasta train set
+  -ote <path-to-output>, --output_test <path-to-output>
+                        path to output file name for the fasta test set
+```
+
+## Handling of none-ATGC nucleotides in a fasta file by replacing them with a random nucleotides
+```
+usage: handle_none_ATGC.py [-h] -o <path-to-output> fasta
+
+Tool for handling none-ATGC nucleotides in a fasta file by replacing them with a random nucleotides
+
+positional arguments:
+  fasta                 fasta file with nucleotide contigs (also accepts amino-acid sequences)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o <path-to-output>, --output <path-to-output>
+                        path to output file name for the corrected non-ATGC fasta
 ```
