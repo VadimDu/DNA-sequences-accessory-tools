@@ -1,5 +1,5 @@
 
-# title: random_sampling_fasta.py
+# title: split_train_test_fasta.py
 # description: Tool for splitting a fasta files into 2 separates files - train set & test set, based on a test size proportion
 # author: Vadim (Dani) Dubinsky [dani.dubinsky@gmail.com]
 # date: 05/05/2021
